@@ -1,0 +1,21 @@
+server:
+  port: 8084
+  error:
+    include-message: always
+spring:
+  flyway:
+    enabled: true
+    baselineVersion: 1
+    locations:
+      classpath: db/migration
+    sqlMigrationSuffixes: .sql
+    baselineOnMigrate: true
+    sqlMigrationPrefix: V
+    schemas: public
+
+  datasource:
+    url: jdbc:postgresql://ec2-52-3-200-138.compute-1.amazonaws.com/d4bb9n519hecus?socketTimeout=3
+    username: yguduahbgsarhb
+    password: 52b6bcacd8193726d312fc3d069eb33db1bc5d567840f65c6e2b9a3176b4155b
+    driverClassName: org.postgresql.Driver
+
